@@ -20,13 +20,14 @@ public class HelloWebController {
     public String helloWorldW(Model model){
 
         model.addAttribute("people",getPeople());
+        model.addAttribute("ejemplo", "Soy un ejemplo");
 
-        return "hello";
+        return "cv";
     }
     @GetMapping(value = "/helloMAV")
     public ModelAndView exampleMAV(){
 
-        ModelAndView modelAndView=new ModelAndView("hello");
+        ModelAndView modelAndView=new ModelAndView("cv");
         modelAndView.addObject("people",getPeople());
         return modelAndView;
     }
